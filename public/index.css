@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
+html{
+	font-family:sans-serif;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+}
+
+body, html {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.layout {
+	width: 100%;
+	display: flex;
+	align-content: space-between;
+	align-items: center;
+}
+
+.selector {
+	margin: 10px;
+	flex: 1 1 auto;
+}
+
+.logo {
+	width: 100px;
+	margin: 10px;
+	margin-right: 20px;
+}
+
+.selector__menu-list {
+	overflow: auto;
+	max-height: 125px !important;
+}
+
+.spacer {
+	height: 140px;
+}

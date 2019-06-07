@@ -1,12 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import ReactDom from 'react-dom';
+import FormSelector from './components/FormSelector';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const CustomElement = (window as any).CustomElement;
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+CustomElement.init((element: any, _context: any) => {
+    const selectedForm = element.value ? JSON.parse(element.value) : null;
+    const config = element.config || {};
+
+    const components = (
+        <FormSelector
+            portalId={config.portalId}
+            selectedForm={selectedForm}
+            disabled={element.disabled}
+            customElementApi={CustomElement}
+        />
+    );
+
+    ReactDom.render(components, document.querySelector('#reactapp'));
+});
