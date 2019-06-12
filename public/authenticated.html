@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HubSpot authenticated</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<p>Authenticated, redirecting back to the selector ...</p>
+<script>
+    if (window.opener && window.opener.refresh) {
+        window.opener.refresh();
+    }
+    window.close();
+</script>
+</body>
+</html>

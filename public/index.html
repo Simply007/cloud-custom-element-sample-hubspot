@@ -10,10 +10,14 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="layout">
-      <div class="selector" id="reactapp"></div>
-      <img class="logo" src="hubspot_logo.png" />
+      <div id="reactapp"></div>
     </div>
     <div class="spacer"></div>
     <script src="bundle.js"></script>
+  <script>
+    window.refresh = function () {
+        window.location.replace(window.location);
+    };
+  </script>
   </body>
 </html>

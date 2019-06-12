@@ -3,6 +3,9 @@ const express = require('express');
 const path = require('path');
 const https = require('https');
 const fs = require('fs');
+const { setupHubSpot } = require('./server/hubspot');
+
+const PORT = 3000;
 
 async function main() {
     const app = express();
@@ -10,14 +13,13 @@ async function main() {
     // Basic form selector UI
     app.use(express.static(path.join(__dirname, 'public')));
 
-    // TODO - Add OAuth handling here
+    setupHubSpot(app, PORT);
 
     app.get('*', (req, res) => {
         res.redirect('/');
     });
 
-    const port = process.env.PORT || 3000;
-    app.set('port', port);
+    app.set('port', PORT);
 
     https.createServer(
         {
@@ -26,10 +28,9 @@ async function main() {
         },
         app
     ).listen(
-        port,
+        PORT,
         function () {
-            console.log(`Custom element listening on port ${port}! Go to https://localhost:${port}/`);
-            opn('https://localhost:' + port);
+            console.log(`Custom element listening on port ${PORT}! Go to https://localhost:${PORT}/`);
         }
     );
 }
