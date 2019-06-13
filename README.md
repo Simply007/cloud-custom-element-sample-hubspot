@@ -18,13 +18,20 @@ Prerequisites:
 
 ```
 git clone https://github.com/kenticomartinh/kc-hubspot.git
+cd kc-hubspot
 npm install
 npm run start
 ```
 
 The element will be running at https://localhost:3000, note that the element needs to be hosted in an IFRAME to initialize properly. See section **Use** 
 
-Also note that you should deploy the custom element to a live NodeJS instance for production use. Use the actual URL instead of https://localhost:3000 for production deployment. 
+Also note that you should deploy the custom element to a live NodeJS instance for production use. Use the actual URL instead of https://localhost:3000 for production deployment.
+
+## HubSpot configuration
+
+HubSpot **Client ID** and **Client secret** are provided as constants in a file `server/hubspot.js`. Sample credentials are provided by default.
+
+In order to connect the form selector to your HubSpot account, replace them with the respective values from the **application** registered under your **HubSpot developer account**.  
 
 ## Use
 
@@ -44,6 +51,7 @@ The element will save a value containing the selected form id and name.
 ```
 {
     "id": "176bcb4d-cbc3-45f0-b11a-f6230c4360f2",
-    "name": "Contact us"
+    "name": "Contact us",
+    "portalId": "5975142"
 }
 ```

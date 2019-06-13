@@ -5,11 +5,13 @@ import {ValueType} from "react-select/lib/types";
 interface IForm {
     id: number;
     name: string;
+    portalId: string;
 }
 
 interface IOption {
     value: number;
     label: string;
+    portalId: string;
 }
 
 interface IFormSelectorProps {
@@ -34,6 +36,7 @@ class FormSelector extends React.Component<IFormSelectorProps, IFormSelectorStat
         const selected = selectedForm && {
             value: selectedForm.id,
             label: selectedForm.name,
+            portalId: selectedForm.portalId,
         };
 
         this.state = {
@@ -75,7 +78,8 @@ class FormSelector extends React.Component<IFormSelectorProps, IFormSelectorStat
                 )
                 .map((item: any) => ({
                     value: item.guid,
-                    label: item.name
+                    label: item.name,
+                    portalId: `${item.portalId}`,
                 }));
 
             return options;
@@ -175,7 +179,11 @@ class FormSelector extends React.Component<IFormSelectorProps, IFormSelectorStat
             this.setState(() => ({
                 selectedForm: value
             }));
-            const selectedForm = typedValue && {id: typedValue.value, name: typedValue.label};
+            const selectedForm = typedValue && {
+                id: typedValue.value,
+                name: typedValue.label,
+                portalId: typedValue.portalId,
+            };
             const elementValue = (selectedForm && JSON.stringify(selectedForm)) || null;
             this.props.customElementApi.setValue(elementValue);
             this.deferredUpdateSize();
