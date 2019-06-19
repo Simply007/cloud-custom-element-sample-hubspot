@@ -2,7 +2,7 @@
 
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-cloud)
 
-This repository contains sample source code of HubSpot Form selector custom element for Kentico Cloud.
+This repository contains the sample source code of HubSpot Form selector custom element for Kentico Cloud.
 
 Note that the code needs to be adjusted for your specific needs and properly tested for production use.
 
@@ -27,7 +27,7 @@ npm run start
 
 The element will be running at https://localhost:3000, note that the element needs to be hosted in an IFRAME to initialize properly. See section **Use** 
 
-Also note that you should deploy the custom element to a live NodeJS instance for production use. Use the actual URL instead of https://localhost:3000 for production deployment.
+Also, note that you should deploy the custom element to a live NodeJS instance for production use. Use the actual URL instead of https://localhost:3000 for production deployment.
 
 ## HubSpot configuration
 
