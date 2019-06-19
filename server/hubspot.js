@@ -1,3 +1,5 @@
+/* Inspired by https://github.com/HubSpot/oauth-quickstart-nodejs/blob/master/index.js */
+
 const request = require('request-promise-native');
 const NodeCache = require('node-cache');
 const session = require('express-session');

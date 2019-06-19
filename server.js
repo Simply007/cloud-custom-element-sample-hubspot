@@ -1,4 +1,3 @@
-const opn = require('opn');
 const express = require('express');
 const path = require('path');
 const https = require('https');
