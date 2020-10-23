@@ -1,8 +1,10 @@
-# HubSpot Form selector for Kentico Cloud
+# HubSpot Form selector for Kentico Kontent
 
-[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-cloud)
+An updated working version of Hubspot integration with Kentico Kontent can be found in [this repository](https://github.com/yuriys-kentico/KenticoKontentHubspotForms)
 
-This repository contains the sample source code of HubSpot Form selector custom element for Kentico Cloud.
+------------------
+
+This repository contains the sample source code of HubSpot Form selector custom element for Kentico Kontent.
 
 Note that the code needs to be adjusted for your specific needs and properly tested for production use.
 
